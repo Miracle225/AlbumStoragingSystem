@@ -1,16 +1,17 @@
 import axios from 'axios';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const FULL_API_URL = `${API_BASE_URL}/api/v1`;
 
-const API_version = '/api/v1';
 
 const fetchGetData = (uri) => {
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   return axios.get(url).catch((error) => {
     console.error('Error fetching data for URL:', url, 'Error', error.message);
     throw error;
   });
 };
 const fetchPostData = (uri, payload) => {
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   return axios.post(url, payload).catch((error) => {
     console.error('Error fetching data for URL:', url, 'Error', error.message);
     throw error;
@@ -18,7 +19,7 @@ const fetchPostData = (uri, payload) => {
 };
 const fetchPostDataWithAuth = (uri, payload) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   return axios
     .post(url, payload, {
       headers: {
@@ -35,7 +36,7 @@ const fetchPostDataWithAuth = (uri, payload) => {
 
 const fetchGetDataWithAuth = async (uri) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   try {
     const response = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
     return response;
@@ -45,7 +46,7 @@ const fetchGetDataWithAuth = async (uri) => {
 };
 const fetchPostFileUploadWithAuth = async (uri, formData) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   try {
     const token = localStorage.getItem('token');
     const response = await axios.post(url, formData, {
@@ -61,7 +62,7 @@ const fetchPostFileUploadWithAuth = async (uri, formData) => {
 };
 const fetchGetDataWithAuthArrayBuffer = (uri) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   try {
     const response = axios.get(url, {
       headers: {
@@ -76,7 +77,7 @@ const fetchGetDataWithAuthArrayBuffer = (uri) => {
 };
 const fetchPutDataWithAuth = (uri, payload) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   return axios
     .put(url, payload, {
       headers: {
@@ -92,7 +93,7 @@ const fetchPutDataWithAuth = (uri, payload) => {
 };
 const fetchDeleteDataWithAuth = async (uri) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   try {
     const response = await axios.delete(url, { headers: { Authorization: `Bearer ${token}` } });
     return response;
@@ -103,7 +104,7 @@ const fetchDeleteDataWithAuth = async (uri) => {
 
 const fetchGetBlobDataWithAuth = async(uri) => {
   const token = localStorage.getItem('token');
-  const url = `${API_version}${uri}`;
+  const url = `${FULL_API_URL}${uri}`;
   try {
     const response = await axios.get(url, 
       { headers: { 'Authorization': `Bearer ${token}`,

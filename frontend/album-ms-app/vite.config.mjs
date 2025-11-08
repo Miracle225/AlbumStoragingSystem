@@ -14,13 +14,6 @@ export default defineConfig(({ mode }) => {
       open: true,
       port: PORT,
       host: true,
-      proxy: {
-        '/api': {
-          target: 'http://localhost:8080',
-          changeOrigin: true,
-          secure: false
-        }
-      }
     },
     preview: {
       open: true,

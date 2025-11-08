@@ -27,7 +27,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/auth")
-@CrossOrigin(origins = "http://localhost:3000",maxAge = 3600,allowedHeaders = "*")
 @Tag(name = "Auth controller", description = "Controller for Account management")
 @Slf4j
 public class AuthController {

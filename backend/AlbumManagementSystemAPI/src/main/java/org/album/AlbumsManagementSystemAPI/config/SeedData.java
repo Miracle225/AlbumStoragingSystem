@@ -28,17 +28,17 @@ public class SeedData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Account account01 = new Account("user@user.com", "pass0101", List.of(Authority.ROLE_USER.toString()));
-        Account account02 = new Account("admin@admin.com", "pass0202", List.of(Authority.ROLE_ADMIN.toString(), Authority.ROLE_USER.toString()));
-        Album album01 = new Album("Travel", "Description", account01);
-        Album album02 = new Album("Office", "Description", account01);
-        Album album03 = new Album("Family", "Description", account01);
-        Album album04 = new Album("Friends", "Description", account01);
-        accountService.save(account01);
-        accountService.save(account02);
-        albumService.save(album01);
-        albumService.save(album02);
-        albumService.save(album03);
-        albumService.save(album04);
+//        Account account01 = new Account("user@user.com", "pass0101", List.of(Authority.ROLE_USER.toString()));
+//        Account account02 = new Account("admin@admin.com", "pass0202", List.of(Authority.ROLE_ADMIN.toString(), Authority.ROLE_USER.toString()));
+//        Album album01 = new Album("Travel", "Description", account01);
+//        Album album02 = new Album("Office", "Description", account01);
+//        Album album03 = new Album("Family", "Description", account01);
+//        Album album04 = new Album("Friends", "Description", account01);
+//        accountService.save(account01);
+//        accountService.save(account02);
+//        albumService.save(album01);
+//        albumService.save(album02);
+//        albumService.save(album03);
+//        albumService.save(album04);
     }
 }
