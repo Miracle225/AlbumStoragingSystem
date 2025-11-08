@@ -198,3 +198,10 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'album.photo' doesn't exist
 2025-11-08 10:46:22 [INFO] o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-11-08 10:46:22 [INFO] o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
 2025-11-08 10:46:22 [INFO] o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2025-11-08 11:11:38 [INFO] o.s.a.AbstractOpenApiResource [http-nio-8080-exec-9] - Init duration for springdoc-openapi is: 618 ms
+2025-11-08 13:50:59 [DEBUG] o.a.A.C.AuthController [http-nio-8080-exec-2] - TOKEN_GENERATION_ERROR: Неверные учетные данные пользователя
+2025-11-08 14:12:13 [INFO] o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 14:12:13 [INFO] o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] - Graceful shutdown complete
+2025-11-08 14:12:13 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 14:12:13 [INFO] c.z.h.HikariDataSource [SpringApplicationShutdownHook] - HikariPool-1 - Shutdown initiated...
+2025-11-08 14:12:13 [INFO] c.z.h.HikariDataSource [SpringApplicationShutdownHook] - HikariPool-1 - Shutdown completed.
