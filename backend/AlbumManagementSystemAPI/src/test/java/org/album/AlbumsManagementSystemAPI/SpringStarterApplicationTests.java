@@ -1,4 +1,4 @@
-package org.album.SpringStarter;
+package org.album.AlbumsManagementSystemAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
